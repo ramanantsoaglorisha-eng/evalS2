@@ -9,6 +9,6 @@
     <title>Document</title>
 </head>
 <body>
-    <button><a href="Vendre.php" value=Vendre ></a></button>
+    
 </body>
 </html>
