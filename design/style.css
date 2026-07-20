@@ -1,0 +1,41 @@
+@font-face {
+    font-family: "nebula";
+    src: url("../font/Nebula-Font/Nebula-Regular.otf");
+}
+@font-face {
+    font-family: "daisy";
+    src: url("../font/font/DaisyRegular.ttf");
+}
+@font-face {
+    font-family: "fashionwack";
+    src: url("../font/fashion_wacks/FashionWacksRegular.ttf");
+}
+@font-face {
+    font-family: "lato";
+    src: url("../font/lato/Lato-Regular.ttf");
+}
+.title {
+    color:rgb(101, 1, 1);
+    font-family: "fashionwack", sans-serif;
+    text-align: center;
+    font-size: 50px;
+}
+
+table{
+    text-align: center;
+    border-radius: 20px;
+    width: 100%;
+    color: rgb(255, 255, 255);
+    font-family: "lato", sans-serif;
+    border-color: rgb(101, 1, 1);
+}
+table th{
+    height: 40px;
+    background-color: rgb(101, 1, 1);
+}
+table td{
+    height: 40px;
+}
+body {
+    background-color: rgb(221, 184, 213);
+}
