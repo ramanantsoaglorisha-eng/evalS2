@@ -11,6 +11,11 @@
     <title>Document</title>
 </head>
 <body>
-    <p><input type="text" name="" id=""></p>
+    <form action="traitement.php" method="get">
+        <p>ETU<input type="text" name="etu" ></p>
+        <p><input type="submit" value="Cliquer"></p>
+
+    </form>
+    
 </body>
 </html>

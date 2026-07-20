@@ -12,7 +12,7 @@
         mysqli_free_result($req);
         return $result;
     }
-    
+
     function get_one_line($sql){
         $req= mysqli_query(dbconnect(),$sql);
         if(! $req){
@@ -21,5 +21,23 @@
         $result=mysqli_fetch_assoc($req);
         mysqli_free_result($req);
         return $result;        
+    }
+
+    function sign_in($itu){
+        $sql="SELECT membre.nom from membre where numero_etu='%s'";
+        $sql= sprintf($sql,$itu);
+
+        $req = mysqli_query(dbconnect(),$sql );
+        $verify=mysqli_num_rows($req);
+
+        if($verify>0){
+            return 1;
+        }
+        if($verify<1){
+            return 0;
+        }
+    }
+    function inscription($itu,$nom){
+        $sql="INSERT INTO membre (nom, numero_etu) VALUES ('$itu', '$nom')";
     }
 ?>
