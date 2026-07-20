@@ -11,7 +11,7 @@
     <title>Document</title>
 </head>
 <body>
-    <form action="traitement.php" method="get">
+    <form action="traitement-login.php" method="get">
         <p>ETU<input type="text" name="etu" ></p>
         <p><input type="submit" value="Cliquer"></p>
 
