@@ -11,6 +11,6 @@
 </head>
 <body>
     <h1>produit à vendre</h1>
-    
+    <button><a href="Vendre.php" value="Aller vendre"></a></button>
 </body>
 </html>

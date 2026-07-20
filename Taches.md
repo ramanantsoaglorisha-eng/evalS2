@@ -14,11 +14,14 @@
 
     
 ### 5 Accueil
-    Montrer tous les produits a vendre par le membres +  2 boutons : - acheter
+    -affichage :Montrer tous les produits a vendre par le membres +  2 boutons : - acheter
               - quantite
-    
-### 6 Vendre
-    Pour vendre des produits
+    -code : boucle
+    -fonction : produit_a_vendre 
 
-### 7 Mes ventes
+### 6 Vendre
+    Pour vendre des produits :
+    -choisir produit + quantite + prix
+
+### 7 Mes ventes 
     Afficher total de ventes effectues/membre
