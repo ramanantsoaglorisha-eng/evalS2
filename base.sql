@@ -42,4 +42,7 @@ CREATE TABLE vente (
     quantite INT
 );
 
-INSERT INTO membre VALUES ("Glorisha", 4665, "");
+INSERT INTO membre (nom, numero_etu, image_profil) VALUES 
+    ("Glorisha", 4665, "img/4665.jpg"),
+    ("Diamondra", 4943, "img/4665.jpg"),
+    ("Herindranto", 5073, "img/5073.jpg");
