@@ -8,17 +8,17 @@
     fonction d'identification
 
 ### 4 Login 
-    champ 1 : numero ETU
-    if ETU n'existe pas-> inscription automatique (+ champ Nom )
+    -fonction : sign_in(verifie si le ETU existe ou pas)+ inscription 
+    -code : condition -> traitement.php
+    -affichage : champ numero itu
 
-### 5 traitement 
     
-### 6 Accueil
+### 5 Accueil
     Montrer tous les produits a vendre par le membres +  2 boutons : - acheter
               - quantite
     
-### 7 Vendre
+### 6 Vendre
     Pour vendre des produits
 
-### 8 Mes ventes
+### 7 Mes ventes
     Afficher total de ventes effectues/membre
