@@ -21,4 +21,4 @@
     Pour vendre des produits
 
 ### 8 Mes ventes
-    Afficher total de ventes effectues/membres
+    Afficher total de ventes effectues/membre
