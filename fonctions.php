@@ -40,4 +40,9 @@
     function inscription($itu,$nom){
         $sql="INSERT INTO membre (nom, numero_etu) VALUES ('$itu', '$nom')";
     }
+
+    function produit_a_vendre(){
+        $sql="select m.nom as nom_membre, p.nom as nom_produit from membre m join produit_membre pm on pm.id_membre=m.id_membre join produit p on p.id_produit=pm.id_produit;";
+        return mysqli_query(dbconnect(),$sql);
+    }
 ?>

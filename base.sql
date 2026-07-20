@@ -109,3 +109,5 @@ INSERT INTO produit_membre (id_produit, id_membre, prix_vente, date_dispo) VALUE
 UPDATE produit_membre
 SET quantite_dispo = 10
 WHERE prix_vente = 8000;
+
+select m.nom as nom_membre, p.nom as nom_produit from membre m join produit_membre pm on pm.id_membre=m.id_membre join produit p on p.id_produit=pm.id_produit;
