@@ -111,3 +111,7 @@ SET quantite_dispo = 10
 WHERE prix_vente = 8000;
 
 select m.nom as nom_membre, p.nom as nom_produit, p.prix_reference as prix from membre m join produit_membre pm on pm.id_membre=m.id_membre join produit p on p.id_produit=pm.id_produit;
+
+ALTER TABLE vente MODIFY date DATE DEFAULT CURRENT_DATE;
+ALTER TABLE vente MODIFY heure TIME DEFAULT CURRENT_TIMESTAMP;
+

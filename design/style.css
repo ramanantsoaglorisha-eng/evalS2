@@ -20,7 +20,18 @@
     text-align: center;
     font-size: 50px;
 }
-
+.lien {
+    color: rgb(101, 1, 1);
+    font-family: "lato", sans-serif;
+    font-size: 20px;
+}
+input{
+    color: white;
+    border-radius: 20px;
+    background-color: rgb(101, 1, 1);
+    border-color: rgb(101, 1, 1);
+    border-collapse: collapse;
+}
 table{
     text-align: center;
     border-radius: 20px;
