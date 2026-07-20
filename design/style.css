@@ -20,22 +20,39 @@
     text-align: center;
     font-size: 50px;
 }
-
+.lien {
+    color: rgb(101, 1, 1);
+    font-family: "lato", sans-serif;
+    font-size: 20px;
+}
+input{
+    color: rgb(101, 1, 1);
+    border-radius: 30px;
+    background-color: white;
+    border-color: rgb(221, 184, 213);
+    border-collapse: collapse;
+}
 table{
     text-align: center;
-    border-radius: 20px;
+    border-radius: 10px;
+    border-color: ;
     width: 100%;
     color: rgb(255, 255, 255);
     font-family: "lato", sans-serif;
-    border-color: rgb(101, 1, 1);
+    border-bottom-color: rgb(101, 1, 1);
+    background-color: rgb(101, 1, 1);
 }
 table th{
     height: 40px;
-    background-color: rgb(101, 1, 1);
 }
 table td{
     height: 40px;
 }
 body {
     background-color: rgb(221, 184, 213);
+}
+
+.etu{
+    color: rgb(101, 1, 1);
+    font-family: "lato", sans-serif;
 }

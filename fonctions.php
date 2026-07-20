@@ -44,34 +44,22 @@
     }
 
     function produit_a_vendre(){
-   
-        $sql="select m.nom as nom_membre, p.nom as nom_produit, p.prix_reference as prix from membre m join produit_membre pm on pm.id_membre=m.id_membre join produit p on p.id_produit=pm.id_produit;";
+        $sql="SELECT m.nom as nom_membre, p.nom as nom_produit , p.prix_reference as prix, pm.id_produit_membre as pmi from membre m join produit_membre pm on pm.id_membre=m.id_membre join produit p on p.id_produit=pm.id_produit;";
         return get_all_lines($sql);
     }
 
-    function vendre( $categorie , $produit ,$prix  ){
-        $sql1="INSERT INTO categorie(nom_categorie) VALUES ('$categorie') ";
-        $sql2="INSERT INTO produit(produit,prix_reference) VALUES ('$produit','$prix') ";
-
-        // $sql="INSERT INTO produit_membre(nom_categorie) VALUES ('$categorie') ";
-        $req1 = mysqli_query(dbconnect(),$sql1 );
-        $req2 = mysqli_query(dbconnect(),$sql2);
-
-
+    function inserer_vente($id, $nb){
+        $sql="INSERT INTO vente (id_produit_membre, quantite) VALUES ($id, $nb);";
+        return mysqli_query(dbconnect(),$sql);
     }
-    function get_id_produit($produit){
-        $sql="SELECT id_produit from produit where nom='%s'";
-        $sql=sprintf($sql,$produit);
-        return get_one_line($sql);
-    }
-    function get_id_membre($num){
-        $sql="SELECT id_membre from membre where numero_etu='$num'";
-        return get_one_line($sql);
 
+    function quant_dispo($nb){
+        $sql="select quantite_dispo from produit_membre where id_produit_membre=$nb;";
+        return mysqli_query(dbconnect(),$sql);
     }
-    function vendre_all($id_produit,$id_membre,$qtte,$prix ,$date_dipo){
-        $sql="INSERT INTO produit_membre(id_produit, id_membre, prix_vente, date_dispo) VALUES ('$id_produit','$id_membre','$qtte','$prix','$date_dispo')";
-        $req1 = mysqli_query(dbconnect(),$sql );
 
+    function mes_vente(){
+        $sql="select m.nom as nom ,pm.id_membre as id,sum(prix_vente) as prix_total from produit_membre pm join membre m on m.id_membre=pm.id_membre group by pm.id_membre;";
+        return mysqli_query(dbconnect(),$sql);
     }
 ?>

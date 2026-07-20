@@ -12,9 +12,8 @@
     <title>accueil</title>
 </head>
 <body>
-    
-    <button><a href="Vendre.php" value="Aller vendre"></a></button>
-    
+    <p><a href="Vendre.php" class="lien">que voulez-vous vendre?</a></p>
+    <p><a href="Mes_ventes.php" class="lien">vente par membre</a></p>
     <h1 class="title">PRODUIT A VENDRE</h1>
     <table>
         <tr>
@@ -24,17 +23,17 @@
             <th>quantité</th>
             <th>acheter</th>
         </tr>
-        
         <?php foreach($resultat as $donnee){?> 
-        <form action="Vendre.php" method="get">
             <tr>
                 <td><?= $donnee['nom_membre']; ?></td>
                 <td><?= $donnee['nom_produit']; ?></td>
                 <td><?= $donnee['prix']; ?></td>
-                <td><input type="number"></td>
-                <td><input type="submit" value="acheter"></td>
+                <form action="get_vente.php" method="get">
+                    <input type="hidden" value="<?= $donnee['pmi'];?>" name="id">
+                    <td><input type="text" name="nb"></td>
+                    <td><input type="submit" value="acheter"></td>
+                </form>
             </tr>
-        </form>
         <?php } ?>
     </table>
 </body>

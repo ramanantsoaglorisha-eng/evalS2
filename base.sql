@@ -110,7 +110,12 @@ UPDATE produit_membre
 SET quantite_dispo = 10
 WHERE prix_vente = 8000;
 
-select m.nom as nom_membre, p.nom as nom_produit, p.prix_reference as prix from membre m join produit_membre pm on pm.id_membre=m.id_membre join produit p on p.id_produit=pm.id_produit;
+select m.nom as nom_membre, p.nom as nom_produit, p.prix_reference as prix, pm.id_produit_membre as pmi from membre m join produit_membre pm on pm.id_membre=m.id_membre join produit p on p.id_produit=pm.id_produit;
 
+ALTER TABLE vente MODIFY date DATE DEFAULT CURRENT_DATE;
+ALTER TABLE vente MODIFY heure TIME DEFAULT CURRENT_TIMESTAMP;
 
-//
+INSERT INTO vente (id_produit_membre, quantite) VALUES (1, 10);
+select quantite_dispo from produit_membre where id_produit_membre=1;
+
+select m.nom as nom ,pm.id_membre as id,sum(prix_vente) from produit_membre pm join membre m on m.id_membre=pm.id_membre group by pm.id_membre;
