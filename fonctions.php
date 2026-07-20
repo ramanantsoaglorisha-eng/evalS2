@@ -44,9 +44,34 @@
     }
 
     function produit_a_vendre(){
-        $sql="SELECT m.nom as nom_membre, p.nom as nom_produit from membre m join produit_membre pm on pm.id_membre=m.id_membre join produit p on p.id_produit=pm.id_produit;";
-        return get_all_lines($sql);
+   
         $sql="select m.nom as nom_membre, p.nom as nom_produit, p.prix_reference as prix from membre m join produit_membre pm on pm.id_membre=m.id_membre join produit p on p.id_produit=pm.id_produit;";
-        return mysqli_query(dbconnect(),$sql);
+        return get_all_lines($sql);
+    }
+
+    function vendre( $categorie , $produit ,$prix  ){
+        $sql1="INSERT INTO categorie(nom_categorie) VALUES ('$categorie') ";
+        $sql2="INSERT INTO produit(produit,prix_reference) VALUES ('$produit','$prix') ";
+
+        // $sql="INSERT INTO produit_membre(nom_categorie) VALUES ('$categorie') ";
+        $req1 = mysqli_query(dbconnect(),$sql1 );
+        $req2 = mysqli_query(dbconnect(),$sql2);
+
+
+    }
+    function get_id_produit($produit){
+        $sql="SELECT id_produit from produit where nom='%s'";
+        $sql=sprintf($sql,$produit);
+        return get_one_line($sql);
+    }
+    function get_id_membre($num){
+        $sql="SELECT id_membre from membre where numero_etu='$num'";
+        return get_one_line($sql);
+
+    }
+    function vendre_all($id_produit,$id_membre,$qtte,$prix ,$date_dipo){
+        $sql="INSERT INTO produit_membre(id_produit, id_membre, prix_vente, date_dispo) VALUES ('$id_produit','$id_membre','$qtte','$prix','$date_dispo')";
+        $req1 = mysqli_query(dbconnect(),$sql );
+
     }
 ?>

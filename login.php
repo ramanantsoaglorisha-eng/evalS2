@@ -1,5 +1,7 @@
 <?php
     include("fonctions.php");
+    session_start();
+    
 ?>
 
 <!DOCTYPE html>

@@ -54,10 +54,10 @@ INSERT INTO membre (nom, numero_etu) VALUES
     ("Zachary", 4900);
 
 INSERT INTO categorie (nom_categorie) VALUES 
-    ("plat"), 1
-    ("boisson"), 2
-    ("snack"), 3
-    ("dessert"); 4
+    ("plat"), 
+    ("boisson"), 
+    ("snack"), 
+    ("dessert"); 
 
 INSERT INTO produit (nom, id_categorie, prix_reference) VALUES 
     ("bolognaise", 1, 8000),
@@ -111,3 +111,6 @@ SET quantite_dispo = 10
 WHERE prix_vente = 8000;
 
 select m.nom as nom_membre, p.nom as nom_produit, p.prix_reference as prix from membre m join produit_membre pm on pm.id_membre=m.id_membre join produit p on p.id_produit=pm.id_produit;
+
+
+//

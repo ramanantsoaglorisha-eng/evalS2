@@ -1,5 +1,6 @@
 <?php
     include("fonctions.php");
+    session_start();
     $resultat=produit_a_vendre();
 ?>
 <!DOCTYPE html>
@@ -13,7 +14,7 @@
 <body>
     
     <button><a href="Vendre.php" value="Aller vendre"></a></button>
-    <h1 class="title">produit à vendre</h1>
+    
     <h1 class="title">PRODUIT A VENDRE</h1>
     <table>
         <tr>
@@ -23,9 +24,9 @@
             <th>quantité</th>
             <th>acheter</th>
         </tr>
-        <?php foreach ($resultat as $donnee){?> 
-        <?php while($donnee = mysqli_fetch_assoc($resultat)){?> 
-        <form action="" method="get">
+        
+        <?php foreach($resultat as $donnee){?> 
+        <form action="Vendre.php" method="get">
             <tr>
                 <td><?= $donnee['nom_membre']; ?></td>
                 <td><?= $donnee['nom_produit']; ?></td>

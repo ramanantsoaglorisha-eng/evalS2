@@ -25,3 +25,17 @@
 
 ### 7 Mes ventes 
     Afficher total de ventes effectues/membre
+
+## version2
+ ### 1 Modifier page Vendre.php: 
+   - ajouter photo aux produits plat
+
+### 2 afficher les ventes par categorie 
+    -lien /categorie -> page vente/produit
+    -lien/produit -> vente/membre
+
+### 3 page ajouter et modifier un produit + case perime
+
+### 4 Accueil.php 
+    -filtrer par categorie et par produit
+

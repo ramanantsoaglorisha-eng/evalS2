@@ -1,5 +1,7 @@
 <?php
     include("fonctions.php");
+    session_start();
+    // $unknown=$_GET[""];
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -9,6 +11,28 @@
     <title>Document</title>
 </head>
 <body>
-    
+    <form action="traitement_sale.php" method="get">
+        <p>Produit<input type="text" name="produit" value="bolognaise"></p>
+        <p>Prix<input type="text" name="prix" value=8000></p>
+        <p>quantite
+                <select name="quantite">
+                    <option value="">— Choisir —</option>
+                    <?php  for ($i=0; $i<10 ;$i++) { ?>
+                        <option value="<?php echo $i; ?>"><?php echo $i; ?></option>
+                    <?php } ?>
+                </select>
+        </p>
+        <p>categorie
+            <select name="categorie" >
+                <option value="">- Type -</option>
+                <option value="plat">plat</option>
+                <option value="boisson">boisson</option>
+                <option value="snack">snack</option>
+                <option value="dessert">dessert</option>
+            </select>
+        </p>
+        <p>Date de disponibilite : <input type="date" name="date"></p>
+
+    </form>
 </body>
 </html>
