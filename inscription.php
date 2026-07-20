@@ -1,14 +1,6 @@
 <?php
     include("fonctions.php");
-    $num=$_GET["etu"];
-    $name=$_GET["nom"];
-    if (isset($num && $name)){
-        $verifie_num = inscription($num,$name);
-            header("Location:Accueil.php");
-    }    
-    else{
-        header("Location:inscrription.php");
-        }
+
     
 ?>
 <!DOCTYPE html>
@@ -19,8 +11,8 @@
     <title>Document</title>
 </head>
 <body>
-    <form action="inscription" method="get">
-        <p>ETU<input type="text" name="etu" ></p>
+    <form action="traitement-inscri.php" method="get">
+        <p>ETU<input type="text" name="etu_insere" ></p>
         <p>Nom<input type="text" name="nom" ></p>
         <p><input type="submit" value="Cliquer"></p>
     </form>

@@ -1,4 +1,4 @@
-<?php 
+<?php
     include("fonctions.php");
     $resultat=produit_a_vendre();
 ?>
@@ -10,17 +10,7 @@
     <title>accueil</title>
 </head>
 <body>
-    <h1>PRODUIT A VENDRE</h1>
-    <table>
-        <tr>
-            <th>nom membre</th>
-            <th>produit à vendre</th>
-        </tr>
-        <?php while($donnee = mysqli_fetch_assoc($resultat)){?> 
-            <tr>
-                <td></td>
-            </tr>
-        <?php } ?>
-    </table>
+    <h1>produit à vendre</h1>
+    
 </body>
 </html>

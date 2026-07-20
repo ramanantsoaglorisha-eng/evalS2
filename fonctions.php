@@ -38,7 +38,9 @@
         }
     }
     function inscription($itu,$nom){
-        $sql="INSERT INTO membre (nom, numero_etu) VALUES ('$itu', '$nom')";
+        $sql="INSERT INTO membre (nom, numero_etu) VALUES ('$nom', '$itu')";
+        $req = mysqli_query(dbconnect(),$sql );
+
     }
 
     function produit_a_vendre(){
