@@ -46,5 +46,7 @@
     function produit_a_vendre(){
         $sql="SELECT m.nom as nom_membre, p.nom as nom_produit from membre m join produit_membre pm on pm.id_membre=m.id_membre join produit p on p.id_produit=pm.id_produit;";
         return get_all_lines($sql);
+        $sql="select m.nom as nom_membre, p.nom as nom_produit, p.prix_reference as prix from membre m join produit_membre pm on pm.id_membre=m.id_membre join produit p on p.id_produit=pm.id_produit;";
+        return mysqli_query(dbconnect(),$sql);
     }
 ?>
