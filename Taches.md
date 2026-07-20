@@ -2,7 +2,7 @@
 ### 1 Create database 
 
 ### 2 connection 
-    connecter a la base 
+    connecter a la base
 
 ### 3 fonctions
     fonction d'identification
