@@ -26,8 +26,9 @@
                 <td><?= $donnee['nom_membre']; ?></td>
                 <td><?= $donnee['nom_produit']; ?></td>
                 <td><?= $donnee['prix']; ?></td>
-                <form action="Vendre.php" method="get">
-                    <td><input type="number" name="nb"></td>
+                <form action="get_vente.php" method="get">
+                    <input type="hidden" value="<?= $donnee['pmi'];?>" name="id">
+                    <td><input type="text" name="nb"></td>
                     <td><input type="submit" value="acheter"></td>
                 </form>
             </tr>
