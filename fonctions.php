@@ -59,7 +59,7 @@
     }
 
     function mes_vente(){
-        $sql="select m.nom as nom ,pm.id_membre as id,sum(prix_vente) from produit_membre pm join membre m on m.id_membre=pm.id_membre group by pm.id_membre;";
+        $sql="select m.nom as nom ,pm.id_membre as id,sum(prix_vente) as prix_total from produit_membre pm join membre m on m.id_membre=pm.id_membre group by pm.id_membre;";
         return mysqli_query(dbconnect(),$sql);
     }
 ?>
