@@ -11,21 +11,25 @@
     <title>accueil</title>
 </head>
 <body>
-    <h1 class="title">produit à vendre</h1>
+    <h1 class="title">PRODUIT A VENDRE</h1>
     <table>
         <tr>
             <th>nom membre</th>
             <th>nom du produit</th>
-            <th>nb</th>
+            <th>prix</th>
+            <th>quantité</th>
             <th>acheter</th>
         </tr>
         <?php while($donnee = mysqli_fetch_assoc($resultat)){?> 
+        <form action="" method="get">
             <tr>
                 <td><?= $donnee['nom_membre']; ?></td>
                 <td><?= $donnee['nom_produit']; ?></td>
-                <td>quantité</td>
-                <td>acheté</td>
+                <td><?= $donnee['prix']; ?></td>
+                <td><input type="number"></td>
+                <td><input type="submit" value="acheter"></td>
             </tr>
+        </form>
         <?php } ?>
     </table>
 </body>
