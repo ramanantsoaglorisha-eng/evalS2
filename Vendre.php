@@ -14,6 +14,7 @@
 <body>
     <p><a href="Accueil.php" class="lien">page acceuil</a></p>
     <h1 class="title">QUE VOULEZ VOUS VENDRE?</h1>
+
     <form action="traitement_sale.php" method="get">
         <p>Prenom:<input type="text" name="prenom" value="Gloglo"></p>
         <p>Produit<input type="text" name="produit" value="bolognaise"></p>
@@ -37,7 +38,8 @@
         </p>
         <p>Date de disponibilite : <input type="date" name="date"></p>
         <p>Ajouter une photo:<input type="file" name="image"></p>
-        <input type="submit" value="envoyer">
+        <p><input type="submit" value="Vendre"></p>
+
     </form>
 </body>
 </html>
