@@ -10,6 +10,7 @@
     $_SESSION['nb']=$nb;
     if (isset($_SESSION['pmi']) && isset($_SESSION['nb']) ){
         echo "hehoooouu";   
+        header("Location:Accueil.php");
     }
     else {
         echo "nooooo";

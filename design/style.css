@@ -27,10 +27,11 @@
 }
 input{
     color: rgb(101, 1, 1);
-    border-radius: 30px;
+    border-radius: 5px;
     background-color: white;
     border-color: rgb(221, 184, 213);
     border-collapse: collapse;
+    height: 20px;
 }
 table{
     text-align: center;
@@ -50,6 +51,11 @@ table td{
 }
 body {
     background-color: rgb(221, 184, 213);
+}
+p{
+    color: rgb(101, 1, 1);
+    font-family: "lato", sans-serif;
+    font-size: 20px;
 }
 
 .etu{
