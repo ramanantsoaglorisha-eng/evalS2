@@ -18,9 +18,10 @@
             <th>nom</th>
             <th>prix_total</th>
         </tr>
-        <?php while($donnee = mysqli_fetch_assoc($resultat)){?> 
+        <?php foreach($resultat as $donnee){?> 
             <tr>
                 <td><?= $donnee['nom'];?></td>
+               
                 <td><?= $donnee['prix_total'];?></td>
             </tr>
         <?php } ?>

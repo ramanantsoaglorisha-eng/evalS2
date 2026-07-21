@@ -59,8 +59,8 @@
     }
 
     function mes_vente(){
-        $sql="select m.nom as nom ,pm.id_membre as id,sum(prix_vente) as prix_total from produit_membre pm join membre m on m.id_membre=pm.id_membre group by pm.id_membre;";
-        return get_one_line($sql);
+        $sql="SELECT m.nom as nom ,sum(prix_vente) as prix_total from produit_membre pm join membre m on m.id_membre=pm.id_membre group by pm.id_membre;";
+        return get_all_lines($sql);
     }
 
     //insere dans categorie
