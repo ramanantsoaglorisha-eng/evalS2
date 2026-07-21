@@ -31,7 +31,7 @@
    - ajouter photo aux produits plat
 
 ### 2 afficher les ventes par categorie 
-    -lien /categorie -> page vente/produit
+    -lien /categorie -> page vente/produit 
     -lien/produit -> vente/membre
 
 ### 3 page ajouter et modifier un produit + case perime

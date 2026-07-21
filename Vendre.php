@@ -12,6 +12,7 @@
     <title>vente</title>
 </head>
 <body>
+
     <form action="traitement_sale.php" method="get">
         <p>Produit<input type="text" name="produit" value="bolognaise"></p>
         <p>Prix<input type="text" name="prix" value=8000></p>
@@ -33,6 +34,7 @@
             </select>
         </p>
         <p>Date de disponibilite : <input type="date" name="date"></p>
+        <p><input type="submit" value="Vendre"></p>
 
     </form>
 </body>

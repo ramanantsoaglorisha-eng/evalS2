@@ -14,6 +14,8 @@
 <body>
     <p><a href="Vendre.php" class="lien">que voulez-vous vendre?</a></p>
     <p><a href="Mes_ventes.php" class="lien">vente par membre</a></p>
+    <p><a href="vente_categorie.php" class="lien">vente par categori</a></p>
+
     <h1 class="title">PRODUIT A VENDRE</h1>
     <table>
         <tr>
